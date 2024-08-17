@@ -23,14 +23,14 @@ spec:
         configuration:
           class: haproxy
           bootstrap:
-            host: 192.168.1.10
+            host: kafka.analytics.livspace.com
           brokers:
             - broker: 0
-              host: 192.168.1.11
+              host: kafka-0.analytics.livspace.com
             - broker: 1
-              host: 192.168.1.12
+              host: kafka-1.analytics.livspace.com
             - broker: 2
-              host: 192.168.1.13
+              host: kafka-2.analytics.livspace.com
     config:
       offsets.topic.replication.factor: 3
       default.replication.factor: 3
@@ -63,6 +63,7 @@ spec:
       deleteClaim: false
     resources:
       limits:
+        #cpu: 500m
         memory: 1024Mi
       requests:
         cpu: 150m
