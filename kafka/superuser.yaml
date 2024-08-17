@@ -1,0 +1,9 @@
+apiVersion: kafka.strimzi.io/v1beta1
+kind: KafkaUser
+metadata:
+  name: super-user
+  labels:
+    strimzi.io/cluster: analytics-kafka-cluster
+spec:
+  authentication:
+    type: tls
