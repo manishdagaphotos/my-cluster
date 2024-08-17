@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: kafka
 resources:
   - namespace.yaml
-  - ./operator
+  # - ./operator
   - ./kafka.yaml
   - ./superuser.yaml
-  - ./ui
+  # - ./ui
